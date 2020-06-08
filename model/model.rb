@@ -14,6 +14,10 @@ class GumballModel
     @stock.positive?
   end
 
+  def enough?(amount)
+    @stock > amount
+  end
+
   def dispense(amount = 1)
     @stock -= amount
   end
